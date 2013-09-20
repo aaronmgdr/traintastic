@@ -16,8 +16,9 @@ class Train
   #
   # Returns the Integer time of the trip.
   def trip_duration(distance)
-    distance * speed
+    distance / speed
   end
+
   def power_source
     if @model.include?('-A')
     'steam'
