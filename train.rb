@@ -9,6 +9,22 @@ class Train
     @model = model
     @speed = speed
   end
+
+  # Calculate the time that a trip will take, in hours.
+  #
+  # distance - The Integer distance of the trip, in miles.
+  #
+  # Returns the Integer time of the trip.
+  def trip_duration(distance)
+    distance / speed
+  end
+  # Calculate the distance traveled n Miles
+  #
+  # Returns the Integer of distance
+  def trip_distance
+    trip_duration * speed
+  end
+
   def power_source
     if @model.include?('-A')
     'steam'
@@ -16,4 +32,5 @@ class Train
     'diesel'
     end
   end
+
 end
