@@ -18,6 +18,12 @@ class Train
   def trip_duration(distance)
     distance / speed
   end
+  # Calculate the distance traveled n Miles
+  #
+  # Returns the Integer of distance
+  def trip_distance
+    trip_duration * speed
+  end
 
   def power_source
     if @model.include?('-A')
@@ -26,4 +32,5 @@ class Train
     'diesel'
     end
   end
+
 end
